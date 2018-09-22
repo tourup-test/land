@@ -277,7 +277,7 @@ cost.</p>
 
 				return false;
 			}
-			$.post( "./getdata.php", {"phone_number" : phn, "phoneCode" : phnc}, 
+			$.post( "getdata.php", {"phone_number" : phn, "phoneCode" : phnc}, 
 			function( data )
 			{
 				if(data)
@@ -301,7 +301,7 @@ cost.</p>
                 }, 2000);
 				return false;
 			}
-			$.post( "./getdata.php", {"phone_number" : phn2, "phoneCode" : phnc2}, 
+			$.post( "getdata.php", {"phone_number" : phn2, "phoneCode" : phnc2}, 
 			function( data )
 			{
 				if(data)
