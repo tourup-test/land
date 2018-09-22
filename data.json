@@ -1,0 +1,12 @@
+[
+	{
+		"countryName": "United States",
+		"code": "US",
+		"phoneCode": "1"
+	},
+	{
+		"countryName": "United Kingdom",
+		"code": "GB",
+		"phoneCode": "44"
+	}
+]
