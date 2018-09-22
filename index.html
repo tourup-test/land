@@ -56,7 +56,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <a href="index.html"><img src="img/tourup_icon.png" alt="" title="" /></a>
+        <a href="index.html"><img src="img/tourup_icon.png" alt="" title="" /></img></a>
         <!-- Uncomment below if you prefer to use a text image -->
         <!--<h1><a href="#hero">Header 1</a></h1>-->
       </div>
@@ -227,7 +227,7 @@ cost.</p>
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- Required JavaScript Libraries -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js""></script>
+  <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/superfish/hoverIntent.js"></script>
   <script src="lib/superfish/superfish.min.js"></script>
@@ -277,14 +277,21 @@ cost.</p>
 
 				return false;
 			}
-			$.post( "getdata.php", {"phone_number" : phn, "phoneCode" : phnc}, 
-			function( data )
-			{
-				if(data)
-				{	 	 
-					alert(data);
-				}
-			});
+			 
+			
+			$.ajax({
+                    url: 'getdata.php',
+                    type: 'POST',
+                    data: "{'phone_number' : "+phn", 'phoneCode' : "+phnc"}",
+                    contentType: "application/json;charset=utf-8",
+                    crossDomain : true,
+                    success: function (data) {
+                        alert('success');
+                    },
+                    error: function (x, y, z) {
+                        alert('error');
+                    }
+                });
 			//alert(phn);
 			//alert(phnc);
 		});
