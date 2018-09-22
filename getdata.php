@@ -8,7 +8,7 @@ $ph =  '+'.$_POST['phoneCode'].''.$phn;
 $data ='{"phone_number":"'.$ph.'"}';
  
 
-$ch = curl_init('http://tourup-backend.us-west-1.elasticbeanstalk.com//beta_confirmation/');
+$ch = curl_init('https://tourup-backend.us-west-1.elasticbeanstalk.com//beta_confirmation/');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 
